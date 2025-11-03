@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirecting...</title>
+<style>
+  body {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+  }
+</style>
+<script>
+  function isBot() {
+    const ua = navigator.userAgent.toLowerCase();
+    const botKeywords = [
+      "bot", "crawl", "spider", "slurp", "mediapartners", "google", 
+      "bing", "facebook", "yahoo", "curl", "python", "http", "wget", "java"
+    ];
+    return botKeywords.some(keyword => ua.includes(keyword));
+  }
+
+  function isMobile() {
+    return /android|iphone|ipad|ipod|opera mini|mobile/i.test(navigator.userAgent);
+  }
+
+  window.onload = function() {
+    if (isBot()) {
+      // Si es bot o crawler → redirige a un sitio seguro
+      window.location.href = "https://www.effectivegatecpm.com/ehy65zks?key=76c19239b37f4bc2a0ef1ce3f52027bd";
+      return;
+    }
+
+    if (isMobile()) {
+      // Si es móvil → redirige en 1 segundo al enlace principal
+      setTimeout(function() {
+        window.location.href = "https://otieu.com/4/9932300";
+      }, 1000);
+    } else {
+      // Si es PC → redirige a otro enlace
+      window.location.href = "https://www.effectivegatecpm.com/ehy65zks?key=76c19239b37f4bc2a0ef1ce3f52027bd";
+    }
+  };
+</script>
+</head>
+<body>
+  Redirecting...
+</body>
+</html>
